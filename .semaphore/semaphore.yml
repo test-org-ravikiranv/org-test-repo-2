@@ -11,7 +11,7 @@ blocks:
         - name: Build
           commands:
             - checkout
-            - sem-version java 1.8
+            - sem-version java 11
             - mvn -B package --file pom.xml
   - name: Maven 2
     task:
@@ -19,7 +19,7 @@ blocks:
         - name: Build
           commands:
             - checkout
-            - sem-version java 1.8
+            - sem-version java 11
             - mvn -B package --file pom.xml
   - name: Maven 3
     task:
@@ -27,5 +27,5 @@ blocks:
         - name: Build
           commands:
             - checkout
-            - sem-version java 1.8
+            - sem-version java 11
             - mvn -B package --file pom.xml
