@@ -12,7 +12,7 @@ blocks:
           commands:
             - checkout
             - sem-version java 11
-            - mvn clean install -Dmaven.test.skip=true
+            - 'mvn clean install spring-boot:repackage -Dmaven.test.skip=true'
   - name: Maven 2
     task:
       jobs:
@@ -20,7 +20,7 @@ blocks:
           commands:
             - checkout
             - sem-version java 11
-            - mvn clean install -Dmaven.test.skip=true
+            - 'mvn clean install spring-boot:repackage -Dmaven.test.skip=true'
   - name: Maven 3
     task:
       jobs:
@@ -28,4 +28,4 @@ blocks:
           commands:
             - checkout
             - sem-version java 11
-            - mvn clean install -Dmaven.test.skip=true
+            - 'mvn clean install spring-boot:repackage -Dmaven.test.skip=true'
