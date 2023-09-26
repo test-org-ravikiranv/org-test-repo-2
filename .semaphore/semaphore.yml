@@ -1,0 +1,31 @@
+version: v1.0
+name: Java
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu2004
+blocks:
+  - name: Maven 1
+    task:
+      jobs:
+        - name: Build
+          commands:
+            - checkout
+            - sem-version java 1.8
+            - mvn -B package --file pom.xml
+  - name: Maven 2
+    task:
+      jobs:
+        - name: Build
+          commands:
+            - checkout
+            - sem-version java 1.8
+            - mvn -B package --file pom.xml
+  - name: Maven 3
+    task:
+      jobs:
+        - name: Build
+          commands:
+            - checkout
+            - sem-version java 1.8
+            - mvn -B package --file pom.xml
